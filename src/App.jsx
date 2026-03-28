@@ -1,0 +1,24 @@
+import React, { useState } from 'react'
+import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
+
+
+import "./stylesheets/App.css"
+import Dashboard from './components/DasHboard'
+export default function App() {
+  const [activeModule, setActiveModule] = useState("patients")
+  return (
+    <div className='app-container'>
+      <Sidebar setActiveModule={setActiveModule}/>
+      <div className='main-content'>
+ <Navbar/>
+ <div className="dashboard-container">
+
+
+       <Dashboard activeModule={activeModule}/>
+       </div>
+       </div>
+      
+    </div>
+  )
+}

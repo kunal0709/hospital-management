@@ -1,0 +1,232 @@
+ /* .medicine-list {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.medicine-list h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.medicine-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-list th {
+  background-color: #17a2b8;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.medicine-list td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.medicine-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+.quantity-badge {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.quantity-badge.low {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.medicine-list .delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.medicine-list .delete-btn:hover {
+  background-color: #c82333;
+}
+
+.medicine-list p {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 16px;
+}  */
+
+
+
+
+
+
+
+
+
+.stock-container {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+}
+
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 20px;
+}
+
+.stock-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.stock-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+.stock-count-badge {
+  background: #f8fafc;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Table Styling */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.modern-med-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; /* Gap between rows */
+}
+
+.modern-med-table th {
+  padding: 12px 20px;
+  color: #94a3b8;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.modern-med-table td {
+  padding: 16px 20px;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* First and last td rounding for row effect */
+.modern-med-table td:first-child { border-left: 1px solid #f1f5f9; border-radius: 12px 0 0 12px; }
+.modern-med-table td:last-child { border-right: 1px solid #f1f5f9; border-radius: 0 12px 12px 0; }
+
+.warning-row td {
+  background-color: #fffaf0 !important;
+  border-color: #fed7aa !important;
+}
+
+.med-info-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.med-name {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.med-id {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.manu-tag {
+  font-size: 13px;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.price-cell {
+  font-weight: 700;
+  color: #0ea5e9;
+}
+
+/* Quantity UI */
+.quantity-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.qty-indicator.healthy { background: #10b981; box-shadow: 0 0 8px #10b98166; }
+.qty-indicator.critical { background: #f59e0b; box-shadow: 0 0 8px #f59e0b66; }
+
+.quantity-badge-v2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.quantity-badge-v2.low { color: #d97706; }
+
+/* Action Button */
+.delete-icon-btn {
+  background: #fee2e2;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-icon-btn:hover {
+  background: #fecaca;
+  transform: scale(1.1);
+}
+
+.text-center { text-align: center; }
+
+/* Empty State */
+.empty-stock {
+  text-align: center;
+  padding: 50px;
+  color: #94a3b8;
+}
+
+.empty-icon { font-size: 40px; margin-bottom: 10px; }

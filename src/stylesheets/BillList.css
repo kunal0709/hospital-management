@@ -1,0 +1,162 @@
+/* Purani CSS ko replace karke ye use karein */
+
+.billing-page {
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.billing-header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.revenue-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.revenue-amt {
+  font-size: 32px;
+  font-weight: 900;
+  color: #10b981;
+  background: #f0fdf4;
+  padding: 5px 15px;
+  border-radius: 12px;
+}
+
+.bills-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.invoice-card-v2 {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 24px;
+  border: 1px solid #f1f5f9;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.invoice-card-v2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px -15px rgba(0,0,0,0.1);
+  border-color: #6366f1;
+}
+
+.inv-badge {
+  background: #e0e7ff;
+  color: #6366f1;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.inv-details-box {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.inv-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #64748b;
+}
+
+.price-bold {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.inv-total-line {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px dashed #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-text { font-weight: 600; color: #1e293b; }
+
+.total-val {
+  font-size: 24px;
+  font-weight: 900;
+  color: #6366f1;
+}
+
+.invoice-footer-v2 {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.print-action-btn {
+  flex: 1;
+  background: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.print-action-btn:hover { background: #6366f1; }
+
+.delete-action-btn-v2 {
+  width: 50px;
+  background: #fff1f2;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.delete-action-btn-v2:hover { background: #ffe4e6; }
+
+.confirm-delete-ui {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff1f2;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.warn-text { font-size: 11px; font-weight: 800; color: #e11d48; flex: 1; }
+
+.yes-btn { background: #e11d48; color: white; border: none; padding: 8px 15px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+.no-btn { background: #94a3b8; color: white; border: none; padding: 8px 15px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+
+/* Empty State */
+.no-bills-container {
+  text-align: center;
+  padding: 100px 20px;
+  background: white;
+  border-radius: 30px;
+  border: 2px dashed #e2e8f0;
+}
+
+.empty-state-icon { font-size: 64px; margin-bottom: 20px; }

@@ -1,0 +1,157 @@
+ /* .inventory-placeholder {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.inventory-placeholder h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.inventory-placeholder p {
+  color: #666;
+  font-size: 16px;
+}  */
+
+
+
+
+
+.inventory-page {
+  padding: 30px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.inventory-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.add-stock-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Stats Cards */
+.stock-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.stat-card.warning { border-left: 5px solid #f59e0b; }
+.stat-card.danger { border-left: 5px solid #ef4444; }
+
+.stat-icon { font-size: 32px; }
+.stat-content label { font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; }
+.stat-content h3 { font-size: 24px; margin: 0; color: #1e293b; }
+
+/* Table Container */
+.inventory-table-container {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+}
+
+.table-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modern-table th {
+  text-align: left;
+  padding: 15px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modern-table td {
+  padding: 20px 15px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.item-name-cell { display: flex; flex-direction: column; }
+.item-name-cell span { font-size: 11px; color: #94a3b8; }
+
+.cat-tag {
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Status Pills */
+.status-pill {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.status-pill.in-stock { background: #dcfce7; color: #166534; }
+.status-pill.low-stock { background: #fef3c7; color: #92400e; }
+.status-pill.out-of-stock { background: #fee2e2; color: #991b1b; }
+
+.restock-btn {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .inventory-table-container { overflow-x: auto; }
+  .modern-table { min-width: 600px; }
+}

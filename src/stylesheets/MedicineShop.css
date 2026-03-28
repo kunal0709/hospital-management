@@ -1,0 +1,160 @@
+.pos-wrapper {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.pos-main {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Inventory Styles */
+.inventory-section {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h1 { font-size: 24px; color: #111827; margin: 0; }
+.section-header p { color: #6b7280; font-size: 14px; margin: 0; }
+
+.search-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.search-icon { position: absolute; left: 15px; top: 12px; }
+
+/* Product Cards */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.pos-card {
+  border: 1px solid #f3f4f6;
+  border-radius: 16px;
+  padding: 15px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.pos-card:hover { border-color: #3b82f6; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+
+.stock-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.brand { font-size: 11px; color: #9ca3af; text-transform: uppercase; display: block; margin-top: 10px; }
+.pos-card h3 { font-size: 16px; margin: 5px 0; color: #1f2937; }
+.price-tag { font-size: 18px; font-weight: 800; color: #3b82f6; margin-bottom: 15px; }
+
+.add-btn {
+  width: 100%;
+  background: #f3f4f6;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.add-btn:hover { background: #3b82f6; color: white; }
+
+/* Sidebar Billing */
+.billing-sidebar {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 40px);
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.cart-header h2 { font-size: 20px; margin-bottom: 20px; }
+
+.patient-picker label { font-size: 12px; font-weight: 700; color: #374151; display: block; margin-bottom: 5px; }
+.patient-picker select { 
+  width: 100%; 
+  padding: 10px; 
+  border-radius: 10px; 
+  border: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.cart-list { flex: 1; overflow-y: auto; }
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.item-main h4 { font-size: 14px; margin: 0; color: #111827; }
+.item-main span { font-size: 12px; color: #6b7280; }
+
+.qty-controls { display: flex; align-items: center; background: #f9fafb; border-radius: 8px; padding: 2px; }
+.qty-controls button { width: 25px; height: 25px; border: none; background: white; border-radius: 6px; cursor: pointer; }
+.qty-controls input { width: 30px; border: none; background: transparent; text-align: center; font-size: 13px; font-weight: 700; }
+
+.row-total { font-weight: 700; color: #111827; font-size: 14px; }
+
+.billing-footer { border-top: 2px dashed #e5e7eb; padding-top: 20px; margin-top: 20px; }
+
+.total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.total-row span { font-size: 14px; color: #6b7280; }
+.total-row .amount { font-size: 24px; font-weight: 900; color: #111827; }
+
+.checkout-btn {
+  width: 100%;
+  padding: 18px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover:not(:disabled) { background: #059669; transform: translateY(-2px); }
+.checkout-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+@media (max-width: 1000px) {
+  .pos-main { grid-template-columns: 1fr; }
+  .billing-sidebar { height: auto; position: static; }
+}

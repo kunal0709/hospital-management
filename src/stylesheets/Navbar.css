@@ -1,0 +1,136 @@
+.glass-navbar {
+  background: #ffffff;
+  color: #1e293b;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 24px;
+  background: #eff6ff;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.title-alt {
+  color: #2563eb;
+  font-weight: 400;
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.live-clock {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.status-indicator {
+  font-size: 10px;
+  color: #10b981;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.divider {
+  width: 1px;
+  height: 35px;
+  background: #e2e8f0;
+}
+
+/* User Profile */
+.navbar-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.navbar-user-profile:hover {
+  background: #f8fafc;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.user-role {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .user-info, .divider, .nav-stats {
+    display: none;
+  }
+  .glass-navbar {
+    padding: 0 15px;
+  }
+}

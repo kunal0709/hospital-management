@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --bg-color: #f3f4f6;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: #ffffff;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --primary: #6366f1;
+}
+
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top right, #e0e7ff, transparent),
+              radial-gradient(circle at bottom left, #f3e8ff, transparent);
+  background-color: var(--bg-color);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 20px;
+}
+
+.appointment-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.form-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.form-header p {
+  color: var(--text-light);
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.error-badge {
+  background: #fff1f2;
+  color: #e11d48;
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  border: 1px solid #ffe4e6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: shake 0.4s ease-in-out;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group.full-width {
+  grid-column: span 2;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding-left: 4px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  background: var(--input-bg);
+  border: 2px solid #f1f5f9;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-dark);
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 35px;
+  padding: 18px;
+  background: var(--brand-gradient);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.5);
+}
+
+.submit-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@media (max-width: 640px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .input-group.full-width { grid-column: span 1; }
+  .appointment-card { padding: 30px 20px; border-radius: 24px; }
+  .form-header h2 { font-size: 26px; }
+}

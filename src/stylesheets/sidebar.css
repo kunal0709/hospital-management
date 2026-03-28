@@ -1,0 +1,129 @@
+.modern-sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px 30px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.2s ease;
+  color: #64748b;
+  text-align: left;
+}
+
+.nav-icon {
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.nav-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Hover State */
+.nav-item:hover {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+/* Active State */
+.nav-item.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.active-pill {
+  position: absolute;
+  right: -16px;
+  width: 4px;
+  height: 24px;
+  background: #2563eb;
+  border-radius: 4px 0 0 4px;
+}
+
+.sidebar-footer {
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 11px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1024px) {
+  .modern-sidebar { width: 80px; padding: 20px 10px; }
+  .nav-label, .sidebar-brand span, .sidebar-footer { display: none; }
+  .nav-item { justify-content: center; padding: 15px; }
+  .active-pill { right: -10px; }
+}
+
+@media (max-width: 768px) {
+  .modern-sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    padding: 10px;
+    border-right: none;
+    border-top: 1px solid #e2e8f0;
+    z-index: 1000;
+  }
+  .sidebar-brand, .sidebar-footer { display: none; }
+  .nav-links { flex-direction: row; justify-content: space-around; width: 100%; }
+  .active-pill {
+    bottom: -10px;
+    right: auto;
+    width: 20px;
+    height: 4px;
+    border-radius: 4px 4px 0 0;
+  }
+}

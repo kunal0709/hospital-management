@@ -1,0 +1,423 @@
+ /* .appointment-list {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.appointment-list h2 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.appointment-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.appointment-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  color: white;
+}
+
+.patient-doctor {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.info-group {
+  flex: 1;
+}
+
+.info-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.info-group p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.appointment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item.full-width {
+  flex-direction: column;
+}
+
+.detail-item .label {
+  color: #666;
+  font-weight: 600;
+  font-size: 13px;
+  min-width: 60px;
+}
+
+.detail-item .value {
+  color: #333;
+  font-size: 14px;
+}
+
+.card-footer {
+  padding: 15px 20px;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-generate-bill {
+  flex: 1;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-generate-bill:hover {
+  background-color: #218838;
+}
+
+.visited-badge {
+  flex: 1;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-delete {
+  flex: 1;
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.confirm-cancel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.confirm-cancel p {
+  margin: 0;
+  color: #666;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-confirm {
+  width: 100%;
+  padding: 8px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-confirm:hover {
+  background-color: #c82333;
+}
+
+.btn-cancel-confirm {
+  width: 100%;
+  padding: 8px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-cancel-confirm:hover {
+  background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .appointment-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-doctor {
+    flex-direction: column;
+  }
+} 
+
+
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+ :root {
+  --bg-subtle: #f9fafb;
+  --white: #ffffff;
+  --text-main: #111827;
+  --text-sub: #6b7280;
+  --primary: #6366f1;
+  --danger: #ef4444;
+  --success: #10b981;
+  --border: #f3f4f6;
+}
+
+.list-container {
+  padding: 30px;
+  background-color: var(--bg-subtle);
+  min-height: 100vh;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.list-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.list-header p {
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.apt-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.apt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
+}
+
+.apt-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.apt-user-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.apt-user-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+.apt-user-info span {
+  font-size: 13px;
+  color: var(--text-sub);
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.visited { background: #dcfce7; color: var(--success); }
+.status-badge.pending { background: #e0e7ff; color: var(--primary); }
+
+.apt-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.detail {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.detail.full { grid-column: span 2; align-items: flex-start; }
+
+.detail label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-sub);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.detail p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.apt-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.bill-btn, .cancel-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.bill-btn { background: var(--primary); color: white; }
+.bill-btn:hover { background: #4f46e5; }
+
+.cancel-btn { background: #fef2f2; color: var(--danger); }
+.cancel-btn:hover { background: #fee2e2; }
+
+.confirm-box {
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.2s;
+}
+
+.confirm-box span { font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px; }
+
+.confirm-btns { display: flex; gap: 8px; }
+
+.confirm-yes { background: var(--danger); color: white; border: none; flex: 1; padding: 6px; border-radius: 8px; cursor: pointer; }
+.confirm-no { background: var(--text-sub); color: white; border: none; flex: 1; padding: 6px; border-radius: 8px; cursor: pointer; }
+
+.empty-state {
+  text-align: center;
+  padding: 100px 0;
+  color: var(--text-sub);
+}
+
+.empty-icon { font-size: 50px; margin-bottom: 10px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .list-container { padding: 16px; }
+  .appointments-grid { grid-template-columns: 1fr; }
+}
