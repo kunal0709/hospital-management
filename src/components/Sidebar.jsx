@@ -1,64 +1,3 @@
-// import { useState } from "react";
-// import "../stylesheets/Sidebar.css";
-
-// export default function Sidebar({ setActiveModule }) {
-
-//   const [activeBtn, setActiveBtn] = useState("patients");
-
-//   const handleClick = (module) => {
-//     setActiveBtn(module);
-//     setActiveModule(module);
-//   };
-
-//   return (
-//     <div className="sidebar">
-
-//       <button
-//         className={activeBtn === "patients" ? "active" : ""}
-//         onClick={() => handleClick("patients")}
-//       >
-//         Patients
-//       </button>
-
-//       <button
-//         className={activeBtn === "appointments" ? "active" : ""}
-//         onClick={() => handleClick("appointments")}
-//       >
-//         Appointments
-//       </button>
-
-//       <button
-//         className={activeBtn === "doctors" ? "active" : ""}
-//         onClick={() => handleClick("doctors")}
-//       >
-//         Doctors
-//       </button>
-
-//       <button
-//         className={activeBtn === "inventory" ? "active" : ""}
-//         onClick={() => handleClick("inventory")}
-//       >
-//         Inventory
-//       </button>
-
-//       <button
-//         className={activeBtn === "medicine-shop" ? "active" : ""}
-//         onClick={() => handleClick("medicine-shop")}
-//       >
-//         Buy Medicine
-//       </button>
-
-//       <button
-//         className={activeBtn === "purchase-history" ? "active" : ""}
-//         onClick={() => handleClick("purchase-history")}
-//       >
-//         Purchase History
-//       </button>
-
-//     </div>
-//   );
-// }
-
 
 
 
@@ -67,18 +6,18 @@
 
 
 import { useState } from "react";
-import "../stylesheets/Sidebar.css";
+import "../stylesheets/sidebar.css";
 
 export default function Sidebar({ setActiveModule }) {
   const [activeBtn, setActiveBtn] = useState("patients");
 
   const menuItems = [
-    { id: "patients", label: "Patients", icon: "👥" },
-    { id: "appointments", label: "Appointments", icon: "📅" },
-    { id: "doctors", label: "Doctors", icon: "👨‍⚕️" },
-    { id: "inventory", label: "Inventory", icon: "📦" },
-    { id: "medicine-shop", label: "Buy Medicine", icon: "🛒" },
-    { id: "purchase-history", label: "History", icon: "📜" },
+    { id: "patients", label: "Patients", icon: "https://img.icons8.com/arcade/64/illness.png" },
+    { id: "appointments", label: "Appointments", icon: "https://img.icons8.com/color/48/tear-off-calendar--v1.png" },
+    { id: "doctors", label: "Doctors", icon: "https://img.icons8.com/color/48/doctor-female.png"  },
+    { id: "inventory", label: "Inventory", icon: "https://img.icons8.com/fluency/48/sell-stock.png" },
+    { id: "medicine-shop", label: "Buy Medicine", icon: "https://img.icons8.com/color/48/pills.png" },
+    { id: "purchase-history", label: "History", icon: "https://img.icons8.com/color/48/activity-history.png" },
   ];
 
   const handleClick = (module) => {
@@ -100,7 +39,7 @@ export default function Sidebar({ setActiveModule }) {
             className={`nav-item ${activeBtn === item.id ? "active" : ""}`}
             onClick={() => handleClick(item.id)}
           >
-            <span className="nav-icon">{item.icon}</span>
+            <span className="nav-icon"><img className="scale-60" src={item.icon} alt="" /></span>
             <span className="nav-label">{item.label}</span>
             {activeBtn === item.id && <div className="active-pill"></div>}
           </button>

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 
 
 import "./stylesheets/App.css"
-import Dashboard from './components/DasHboard'
+import Dashboard from './components/Dashboard'
 export default function App() {
   const [activeModule, setActiveModule] = useState("patients")
   return (
